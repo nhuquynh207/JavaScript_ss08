@@ -16,7 +16,7 @@ const reportByPosition = (list) =>{
             position: parts[1],
             goals:    Number(parts[2]),
             assists:  Number(parts[3]),
-            match:    Number(parts[4]);
+            match:    Number(parts[4]),
         };
     });
 
@@ -32,7 +32,7 @@ const reportByPosition = (list) =>{
 
     const group = result[player.position];
 
-    group.count = count + 1;
+    group.count = group.count + 1;
     group.totalGoals = group.totalGoals + player.goals;
     group.totalAssists = group.totalAssists + player.assists;
     group.totalMatches = group.totalMatches + player.matches;
