@@ -20,25 +20,7 @@ const reportByPosition = (list) =>{
         };
     });
 
-    const groups = topPlayer.reduce((result,player) =>{
-        if(!result[player.position]){
-            result[player.position]={
-                count: 0,
-                totalGoals: 0,
-                totalAssists: 0,
-                totalMatches: 0
-            };
-        }
 
-    const group = result[player.position];
-
-    group.count = group.count + 1;
-    group.totalGoals = group.totalGoals + player.goals;
-    group.totalAssists = group.totalAssists + player.assists;
-    group.totalMatches = group.totalMatches + player.matches;
-
-    return result;
-    })
 
     console.log(position);
     console.log("Cầu thủ:", group.length);
